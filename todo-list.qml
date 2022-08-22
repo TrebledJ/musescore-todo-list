@@ -1,8 +1,10 @@
 import QtQuick 2.0
 import MuseScore 3.0
-import QtQuick.Controls 2.0
+import QtQuick.Controls 1.0
 import QtQuick.Controls.Styles 1.3
+import QtQuick.Dialogs 1.2
 import QtQuick.Layouts 1.1
+import Qt.labs.settings 1.0
 
 MuseScore {
     id: plugin
@@ -241,12 +243,87 @@ MuseScore {
             Button {
                 Layout.fillWidth: true
                 text: qsTr("Settings")
-                // onClicked: console.log("todo")
-                onClicked: dialog.open()
+                onClicked: {
+                    dRefreshCheckbox.checkedState = settings.refresh ? Qt.Checked : Qt.Unchecked;
+                    dRegexp.text = settings.regexp.source;
+                    dElements.text = settings.elements.join(",");
+                    dialog.open()
+                }
             }
         }
     }
 
+    Dialog {
+        id: dialog
+        title: "Todo-List Settings"
+        standardButtons: Dialog.Ok | Dialog.Cancel
+
+        onAccepted: {
+            console.log("settings accepted")
+            settings.refresh = dRefreshCheckbox.checkedState === Qt.Checked;
+            
+            var regexp = dRegexp.text || dRegexp.placeholderText;
+            settings.regexp = new RegExp(regexp, 'i');
+
+            var elements = dElements.text || dElements.placeholderText;
+            settings.elements = elements.split(",").map(function (n) { return Number(n.trim()); });
+
+            analyseTodos();
+        }
+        onRejected: console.log("settings cancelled")
+
+        GridLayout {
+            anchors.fill: parent
+            columns: 2
+            columnSpacing: 10
+
+            Item {
+                Layout.columnSpan: 2
+                Layout.fillHeight: true
+            }
+            
+            Label {
+                text: "Continuous Refresh"
+            }
+            
+            CheckBox {
+                id: dRefreshCheckbox
+            }
+            
+            Label {
+                text: "Filter RegExp"
+            }
+            
+            TextField {
+                id: dRegexp
+                Layout.fillWidth: true
+                placeholderText: "^(todo|fixme)"
+            }
+            
+            Label {
+                text: "Filter Elements"
+            }
+            
+            TextField {
+                id: dElements
+                Layout.fillWidth: true
+                placeholderText: "42,43"
+            }
+
+            Item {
+                Layout.columnSpan: 2
+                Layout.fillHeight: true
+            }
+        }
+    }
+
+    Settings {
+        id: settings
+        category: "plugin.todo-list"
+        property alias refresh: plugin.continuousRefresh
+        property alias regexp: plugin.filterRegexp
+        property alias elements: plugin.filterElements
+    }
 }
 
 /**
