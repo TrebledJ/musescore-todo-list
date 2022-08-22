@@ -17,7 +17,6 @@ Here's a list of text element types from the MuseScore API:
 
 | Type | Name   |
 |------|--------|
-
 | 41   | Tempo Text |
 | 42   | Staff Text |
 | 43   | System Text |
