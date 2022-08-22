@@ -14,7 +14,7 @@ Examples of todos:
 
 This plugin aims to increase the composer's quality of life. The typical usage would be to add `TODO`s/`FIXME`s as staff text via <kbd>Ctrl</kbd>+<kbd>T</kbd> or <kbd>Cmd</kbd>+<kbd>T</kbd>, noting down your thoughts and ideas before they disappear. The plugin will then automatically refresh and display the curated list of `TODO`s on a dock.
 
-<!-- TODO insert screenshot -->
+![](img.png)
 
 The plugin is configurable in multiple ways:
 
