@@ -15,15 +15,14 @@ The plugin is configurable in multiple ways:
 
 Here's a list of text element types from the MuseScore API:
 
-+------+--------+
 | Type | Name   |
-+------+--------+
+|------|--------|
+
 | 41   | Tempo Text |
 | 42   | Staff Text |
 | 43   | System Text |
 | 44   | Rehearsal Mark |
 | 45   | Instrument Change |
 | 46   | Staff Type Change |
-+------+--------+
 
 [regex]: https://www.regular-expressions.info/
