@@ -255,7 +255,7 @@ MuseScore {
 
     Dialog {
         id: dialog
-        title: "Todo-List Settings"
+        title: qsTr("Settings")
         standardButtons: Dialog.Ok | Dialog.Cancel
 
         onAccepted: {
@@ -283,7 +283,7 @@ MuseScore {
             }
             
             Label {
-                text: "Continuous Refresh"
+                text: qsTr("Continuous Refresh")
             }
             
             CheckBox {
@@ -291,7 +291,7 @@ MuseScore {
             }
             
             Label {
-                text: "Filter RegExp"
+                text: qsTr("Filter RegExp")
             }
             
             TextField {
@@ -301,7 +301,7 @@ MuseScore {
             }
             
             Label {
-                text: "Filter Elements"
+                text: qsTr("Filter Elements")
             }
             
             TextField {
