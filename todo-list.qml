@@ -19,7 +19,7 @@ MuseScore {
     width: 150
     height: 200
 
-    property bool continuousRefresh: false
+    property bool continuousRefresh: true
 
     // Filter properties.
     property var filterRegexp: /^(todo|fixme)/i
