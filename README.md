@@ -3,7 +3,7 @@ Todo-list plugin for MuseScore. You can never have too many todos.
 
 In software development, TODOs are commonly added into source code as reminders to the poor developers toiling away writing code. TODOs come in many forms: bugs to be fixed, issues to be resolved, feature requests, etc. Sometimes when composing, one may also find themselves lost in a sea of to-dos.
 
-This plugin aims to increase the composer's quality of life. The typical usage would be to add `TODO`s/`FIXME`s via Ctrl+T (or Cmd+T), noting down your thoughts and ideas before they disappear. The plugin will then automatically refresh and display the curated list of `TODO`s on a dock.
+This plugin aims to increase the composer's quality of life. The typical usage would be to add `TODO`s/`FIXME`s via <kbd>Ctrl</kbd>+<kbd>T</kbd> (or <kbd>Cmd</kbd>+<kbd>T</kbd>), noting down your thoughts and ideas before they disappear. The plugin will then automatically refresh and display the curated list of `TODO`s on a dock.
 
 <!-- TODO insert screenshot -->
 
