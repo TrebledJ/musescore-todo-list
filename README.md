@@ -1,6 +1,12 @@
 # musescore-todo-list
 A todo-list plugin for MuseScore. You can never have too many todos.
 
+In short this plugin helps you:
+
+* Organise your composition workflow.
+* Find `TODO`s and `FIXME`s easily.
+* Navigate to the points of trouble without hassle—well, except having to insert text at said points in the first place.
+
 In software development, todos are commonly added into source code as reminders to the poor developers toiling away writing code. Todos come in many forms: bugs to be fixed, issues to be resolved, feature requests, etc. Sometimes when composing, one may also find oneself lost in a sea of todos. 
 
 Examples of todos:
