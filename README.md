@@ -26,9 +26,10 @@ The plugin is configurable in multiple ways:
 
 * **Continuous Refresh**. Set true for the plugin to update the to-do list whenever the score is updated. May be slow for humongous scores.
 * **Filter Regex**. A [regular expression][regex] to filter text elements. Case-insensitive. By default, the regex is `^(todo|fixme)`. This matches texts that start with `todo` or `fixme`.
+* **Filter Case Sensitivity**. Whether the matching should be case-sensitive.
 * **Filter Elements**. The MuseScore Element Types to filter. By default, only Staff Text (42) and System Text (43) are filtered.
 
-Here's a list of text element types from the MuseScore API:
+For reference, here's a list of text element types from the MuseScore API:
 
 | Type | Name   |
 |------|--------|
@@ -38,5 +39,12 @@ Here's a list of text element types from the MuseScore API:
 | 44   | Rehearsal Mark |
 | 45   | Instrument Change |
 | 46   | Staff Type Change |
+
+(Todos in lyrics are currently not supported.)
+
+
+### Development
+Pull requests and translations are welcome.
+
 
 [regex]: https://www.regular-expressions.info/
