@@ -120,10 +120,17 @@ MuseScore {
         var item = todosModel.get(index);
         curScore.selection.clear();
         var element = findTodo(item);
+        if (!continuousRefresh && !element) {
+            // We should only need to try rediscover it if continuousRefresh is turned off.
+            console.warn("could not recover element!");
+            console.warn("reanalysing and retrying...");
+            analyseTodos();
+            element = findTodo(item);
+        }
         if (!element) {
-            console.error("could not recover element!");
+            console.warn("could not recover element :(");
             return;
-        } 
+        }
         var result = curScore.selection.select(element);
         console.log("selection result:", result);
         cmd("reset"); // Repaint canvas.
