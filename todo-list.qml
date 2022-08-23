@@ -23,6 +23,7 @@ MuseScore {
 
     // Filter properties.
     property var filterRegexp: /^(todo|fixme)/i
+    property bool filterCaseInsensitive: true
     property var filterElements: [Element.STAFF_TEXT, Element.SYSTEM_TEXT]
 
     property var prevScore: null
@@ -251,8 +252,10 @@ MuseScore {
                 Layout.fillWidth: true
                 text: qsTr("Settings")
                 onClicked: {
+                    // Fill in existing values.
                     dRefreshCheckbox.checkedState = settings.refresh ? Qt.Checked : Qt.Unchecked;
                     dRegexp.text = settings.regexp.source;
+                    dCaseInsensitiveCheckBox.checkedState = settings.caseInsensitive ? Qt.Checked : Qt.Unchecked;
                     dElements.text = settings.elements.join(",");
                     dialog.open()
                 }
@@ -267,15 +270,21 @@ MuseScore {
 
         onAccepted: {
             console.log("settings accepted")
+
+            // Update settings with dialog values.
             settings.refresh = dRefreshCheckbox.checkedState === Qt.Checked;
             
+            var i = dCaseInsensitiveCheckBox.checkedState == Qt.Checked;
+            settings.caseInsensitive = i;
+
             var regexp = dRegexp.text || dRegexp.placeholderText;
-            settings.regexp = new RegExp(regexp, 'i');
+            settings.regexp = new RegExp(regexp, i ? 'i' : '');
+
 
             var elements = dElements.text || dElements.placeholderText;
             settings.elements = elements.split(",").map(function (n) { return Number(n.trim()); });
 
-            analyseTodos();
+            analyseTodos(); // Refresh.
         }
         onRejected: console.log("settings cancelled")
 
@@ -308,6 +317,14 @@ MuseScore {
             }
             
             Label {
+                text: qsTr("Filter Case Insensitive")
+            }
+            
+            CheckBox {
+                id: dCaseInsensitiveCheckBox
+            }
+            
+            Label {
                 text: qsTr("Filter Elements")
             }
             
@@ -329,6 +346,7 @@ MuseScore {
         category: "plugin.todo-list"
         property alias refresh: plugin.continuousRefresh
         property alias regexp: plugin.filterRegexp
+        property alias caseInsensitive: plugin.filterCaseInsensitive
         property alias elements: plugin.filterElements
     }
 }
