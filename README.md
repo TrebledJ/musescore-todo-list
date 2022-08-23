@@ -44,7 +44,7 @@ For reference, here's a list of text element types from the MuseScore API:
 
 
 ### Development
-Pull requests and translations are welcome.
+Pull requests, translations, and bug reports are welcome.
 
 
 [regex]: https://www.regular-expressions.info/
