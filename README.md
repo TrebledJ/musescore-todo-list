@@ -42,6 +42,7 @@ For reference, here's a list of text element types from the MuseScore API:
 
 (Todos in lyrics are currently not supported.)
 
+This plugin should (in theory) work in MuseScore versions 3.5 and up.
 
 ### Development
 Pull requests, translations, and bug reports are welcome.
