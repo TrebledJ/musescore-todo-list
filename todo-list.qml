@@ -8,7 +8,7 @@ import Qt.labs.settings 1.0
 MuseScore {
     id: plugin
     description: "Scans the score for TODO and FIXME text elements."
-    version: "3.5.0"
+    version: "3.0.0"
     menuPath: "Plugins.To-Do List"
 
     pluginType: "dock"
