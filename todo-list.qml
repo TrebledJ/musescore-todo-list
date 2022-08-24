@@ -134,7 +134,6 @@ MuseScore {
         var result = curScore.selection.select(element);
         console.log("selection result:", result);
         cmd("reset"); // Repaint canvas.
-        // // TODO: scroll to selection in score.
         cmd("note-input"); // Janky code. X(
         cmd("note-input");
     }
