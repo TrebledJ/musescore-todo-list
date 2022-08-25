@@ -29,9 +29,8 @@ MuseScore {
     property var prevLayoutTick: null
 
     onRun: {
-        if (!curScore) {
-            Qt.quit();
-        }
+        if (!curScore)
+            return;
 
         prevScore = curScore;
         analyseTodos();
