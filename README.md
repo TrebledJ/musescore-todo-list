@@ -22,7 +22,7 @@ This plugin aims to increase the quality of life of composers, arrangers, transc
 
 ![](img.png)
 
-### Setup
+### Installation
 
 Download the [QML file][file] and install it in your MuseScore plugins directory. (See the [MuseScore Handbook][handbook] for a guide on installing plugins.)
 
