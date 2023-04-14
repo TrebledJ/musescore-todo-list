@@ -3,11 +3,11 @@ A todo-list plugin for MuseScore. You can never have too many todos.
 
 In short this plugin helps you:
 
-* Organise your composition workflow.
+* Organise your score editing workflow.
 * Find `TODO`s and `FIXME`s easily.
 * Navigate to the points of trouble without hassle—well, except having to insert text at said points in the first place.
 
-In software development, todos are commonly added into source code as reminders to the poor developers toiling away writing code. Todos come in many forms: bugs to be fixed, issues to be resolved, feature requests, etc. Sometimes when composing, one may also find oneself lost in a sea of todos. 
+In software development, todos are commonly added to source code as reminders to the poor developers toiling away writing code. Todos come in many forms: bugs to be fixed, issues to be resolved, feature requests, etc. Sometimes when composing, one may also find oneself lost in a sea of todos, struggling to remember what one wanted to change in a particular measure. 
 
 Examples of todos:
 
@@ -18,7 +18,7 @@ Examples of todos:
 * TODO: Add bowing articulation to strings.
 * TODO: Confirm with friend if this part is playable.
 
-This plugin aims to increase the composer's quality of life. The typical usage would be to add `TODO`s/`FIXME`s as staff text via <kbd>Ctrl</kbd>+<kbd>T</kbd> or <kbd>Cmd</kbd>+<kbd>T</kbd>, noting down your thoughts and ideas before they disappear. The plugin will then automatically refresh and display the curated list of `TODO`s on a dock.
+This plugin aims to increase the quality of life of composers, arrangers, transcribers, and well—anybody who edits scores. The typical usage would be to add `TODO`s/`FIXME`s as staff text via <kbd>Ctrl</kbd>+<kbd>T</kbd> or <kbd>Cmd</kbd>+<kbd>T</kbd>, noting down your thoughts and ideas before they disappear. The plugin will then automatically refresh and display the curated list of `TODO`s on a dock.
 
 ![](img.png)
 
