@@ -31,20 +31,20 @@ Obtain the [QML plugin file directly][file] or by downloading a [zip of the proj
 
 ### Usage
 
-* To add TODOs, first create a text element using one of the following methods:
-  1. drag from the palette,
-  2. select the option from the menu (Add > Text > Staff/System Text), or
-  3. use the shortcut; Ctrl + T / Ctrl + Shift + T on Windows/Linux; Cmd + T / Cmd + Shift + T on Mac.
+1. To add TODOs, first create a text element using one of the following methods:
+    1. drag from the palette,
+    2. select the option from the menu (Add > Text > Staff/System Text), or
+    3. use the shortcut; Ctrl + T / Ctrl + Shift + T on Windows/Linux; Cmd + T / Cmd + Shift + T on Mac.
   
-  By default, only Staff Text and System Text are checked for TODOs. This can be modified in the [settings](#settings).
+    By default, only Staff Text and System Text are checked for TODOs. This can be modified in the [settings](#settings).
   
-* Begin the text with a pattern such as `TODO`, `todo`, `FIXME`, or `fixme`. The plugin will only display texts which have this prefix.
+2. Begin the text with a pattern such as `TODO`, `todo`, `FIXME`, or `fixme`. The plugin will only display texts which have this prefix.
 
-  By default, only the words TODO and FIXME will match.  This can be modified in the [settings](#settings).
+    By default, only the words TODO and FIXME will match.  This can be modified in the [settings](#settings).
 
-* Keep typing the rest of your TODO. The display panel on the right should update automagically with your text.
+3. Keep typing the rest of your TODO. The display panel on the right should update automagically with your text.
 
-  The automagic may be disabled by unchecking the [Continuous Refresh](#settings) option.
+    The automagic may be disabled by unchecking the [Continuous Refresh](#settings) option.
 
 ### Settings
 
