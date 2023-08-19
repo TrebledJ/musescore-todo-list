@@ -29,11 +29,31 @@ Obtain the [QML plugin file directly][file] or by downloading a [zip of the proj
 [file]: https://github.com/TrebledJ/musescore-todo-list/raw/main/todo-list.qml
 [handbook]: https://musescore.org/en/handbook/3/plugins
 
+### Usage
+
+* To add TODOs, first create a text element using one of the following methods:
+  1. drag from the palette,
+  2. select the option from the menu (Add > Text > Staff/System Text), or
+  3. use the shortcut; Ctrl + T / Ctrl + Shift + T on Windows/Linux; Cmd + T / Cmd + Shift + T on Mac.
+  
+  By default, only Staff Text and System Text are checked for TODOs. This can be modified in the [settings](#settings).
+  
+* Begin the text with a pattern such as `TODO`, `todo`, `FIXME`, or `fixme`. The plugin will only display texts which have this prefix.
+
+  By default, only the words TODO and FIXME will match.  This can be modified in the [settings](#settings).
+
+* Keep typing the rest of your TODO. The display panel on the right should update automagically with your text.
+
+  The automagic may be disabled by unchecking the [Continuous Refresh](#settings) option.
+
 ### Settings
 
 The plugin is configurable in multiple ways:
 
 * **Continuous Refresh**. Set true for the plugin to update the to-do list whenever the score is updated. May be slow for humongous scores.
+
+  **Note**: If you're encountering immense lag when modifying text on large scores, try turning off the _Continuous Refresh_ option, and manually pressing **Refresh** to update the display.
+  
 * **Filter Regex**. A [regular expression][regex] to filter text elements. Case-insensitive. By default, the regex is `^(todo|fixme)`. This matches texts that start with `todo` or `fixme`.
 * **Filter Case Sensitivity**. Whether the matching should be case-sensitive.
 * **Filter Elements**. Comma-separated list of MuseScore Element Types to filter. By default, only Staff Text (42) and System Text (43) are filtered.
