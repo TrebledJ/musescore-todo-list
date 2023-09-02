@@ -24,10 +24,11 @@ This plugin aims to increase the quality of life of composers, arrangers, transc
 
 ### Installation
 
-Obtain the [QML plugin file directly][file] or by downloading a [zip of the project](https://github.com/TrebledJ/musescore-todo-list/archive/main.zip) (which contains the QML file). Install the plugin by moving the file to your MuseScore plugins directory. (See the [MuseScore Handbook][handbook] for a guide on installing plugins.)
+Obtain the [QML plugin file directly][file] or by downloading a [zip of the project](https://github.com/TrebledJ/musescore-todo-list/archive/main.zip) (which contains the QML file). Install the plugin by moving the file to your MuseScore plugins directory. (See the [MuseScore Handbook v3][handbook v3] or [MuseScore Handbook v4][handbook v4] for a guide on installing plugins.)
 
 [file]: https://github.com/TrebledJ/musescore-todo-list/raw/main/todo-list.qml
-[handbook]: https://musescore.org/en/handbook/3/plugins
+[handbook v3]: https://musescore.org/en/handbook/3/plugins
+[handbook v4]: https://musescore.org/en/handbook/4/plugins
 
 ### Usage
 
