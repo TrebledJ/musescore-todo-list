@@ -7,6 +7,12 @@ import Qt.labs.settings 1.0
 
 MuseScore {
     id: plugin
+    Component.onCompleted: {
+            if (mscoreMajorVersion >= 4) {
+               plugin.title = qsTr("To-Do List")
+               
+            }
+      }
     description: "Scans the score for TODO and FIXME text elements."
     version: "3.0.0"
     menuPath: "Plugins.To-Do List"
