@@ -9,7 +9,7 @@ In short this plugin helps you:
 * Find `TODO`s and `FIXME`s easily.
 * Navigate to the points of trouble without hassle—well, except having to insert text at said points in the first place.
 
-In software development, todos are commonly added to source code as reminders to the poor developers toiling away writing code. Todos come in many forms: bugs to be fixed, issues to be resolved, feature requests, etc. Sometimes when composing, one may also find oneself lost in a sea of todos, struggling to remember what one wanted to change in a particular measure. 
+In software development, todos are commonly added to source code as reminders to the poor developers toiling away writing code. Todos come in many forms: bugs to be fixed, issues to be resolved, feature requests, etc. Sometimes when composing, we may also find ourselves lost in a sea of todos, struggling to remember what we wanted to change in a particular measure. Or perhaps someone's reviewing our score, and they wish to leave short comments. Or maybe we're just waiting for the right inspiration to hit.
 
 Examples of todos:
 
