@@ -28,7 +28,7 @@ This plugin aims to increase the quality of life of composers, arrangers, transc
 
 Either...
 
-1. Obtain the QML plugin file directly ([MS3][v3 file] / [MS4][v4 file]), OR 
+1. Obtain the QML plugin file directly ([MS3][file v3] / [MS4][file v4]), OR 
 2. Download a [zip of the project](https://github.com/TrebledJ/musescore-todo-list/archive/main.zip) and locate the appropriate subfolder (`ms3/` or `ms4/`, depending on your version).
 
 Then move the file/folder to your MuseScore plugins directory. Refer to the MuseScore Handbook ([MS3][handbook v3] / [MS4][handbook v4]) for detailed a guide on installing plugins.
