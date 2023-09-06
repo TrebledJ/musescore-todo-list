@@ -78,6 +78,8 @@ For reference, here's a list of text element types from the MuseScore API:
 | Instrument Change | 45       | 53       |
 | Staff Type Change | 46       | 54       |
 
+<!-- MS4: refer to https://github.com/musescore/MuseScore/blob/master/src/engraving/types/types.h. -->
+
 (Todos in lyrics are currently not supported.)
 
 This plugin should (in theory) work in MuseScore versions 3.5 and up.
