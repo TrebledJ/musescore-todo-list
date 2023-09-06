@@ -89,7 +89,7 @@ This plugin should (in theory) work in MuseScore versions 3.5 and up.
 As of writing, the MuseScore 4 (MS4) plugin environment is still a work in progress. Nevertheless, a version for MS4 is available, with the following limitations:
 
 * Dialog. Docked plugins are currently unavailable, forcing the plugin to be a dialog.
-* Fixed dimensions. On some resolutions, the dialog box may be too small or big. I've added a couple options to modify the dimensions. You may need to reload the plugin afterwards.
+* Fixed dimensions. Currently, the dialog width/height are fixed. On some resolutions, the dialog box may be too small or big. I've added a couple options to modify the dimensions. You may need to reload the plugin afterwards.
 * Jank text input UI in settings. QML `TextField` doesn't work for now, so please bear with it.
 
 Also, FYI note that the `ElementType` codes have changed between MS4 and MS3. See the table in [Settings](#settings).
