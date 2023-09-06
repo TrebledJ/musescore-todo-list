@@ -1,6 +1,8 @@
 # musescore-todo-list
 A todo-list plugin for MuseScore. You can never have too many todos.
 
+> **MuseScore 4 Update**: See [the note for MuseScore 4](#musescore-4). ❤️
+
 In short this plugin helps you:
 
 * Organise your score-editing workflow.
@@ -24,9 +26,15 @@ This plugin aims to increase the quality of life of composers, arrangers, transc
 
 ### Installation
 
-Obtain the [QML plugin file directly][file] or by downloading a [zip of the project](https://github.com/TrebledJ/musescore-todo-list/archive/main.zip) (which contains the QML file). Install the plugin by moving the file to your MuseScore plugins directory. (See the [MuseScore Handbook v3][handbook v3] or [MuseScore Handbook v4][handbook v4] for a guide on installing plugins.)
+Either...
 
-[file]: https://github.com/TrebledJ/musescore-todo-list/raw/main/todo-list.qml
+1. Obtain the QML plugin file directly ([MS3][v3 file] / [MS4][v4 file]), OR 
+2. Download a [zip of the project](https://github.com/TrebledJ/musescore-todo-list/archive/main.zip) and locate the appropriate subfolder (`ms3/` or `ms4/`, depending on your version).
+
+Then move the file/folder to your MuseScore plugins directory. Refer to the MuseScore Handbook ([MS3][handbook v3] / [MS4][handbook v4]) for detailed a guide on installing plugins.
+
+[file v3]: https://github.com/TrebledJ/musescore-todo-list/raw/main/ms3/todo-list.qml
+[file v4]: https://github.com/TrebledJ/musescore-todo-list/raw/main/ms4/todo-list.qml
 [handbook v3]: https://musescore.org/en/handbook/3/plugins
 [handbook v4]: https://musescore.org/en/handbook/4/plugins
 
@@ -61,18 +69,28 @@ The plugin is configurable in multiple ways:
 
 For reference, here's a list of text element types from the MuseScore API:
 
-| Type | Name   |
-|------|--------|
-| 41   | Tempo Text |
-| 42   | Staff Text |
-| 43   | System Text |
-| 44   | Rehearsal Mark |
-| 45   | Instrument Change |
-| 46   | Staff Type Change |
+| Name              | MS3 Code | MS4 Code |
+| ----------------- | -------- | -------- |
+| Tempo Text        | 41       | 46       |
+| Staff Text        | 42       | 47       |
+| System Text       | 43       | 48       |
+| Rehearsal Mark    | 44       | 52       |
+| Instrument Change | 45       | 53       |
+| Staff Type Change | 46       | 54       |
 
 (Todos in lyrics are currently not supported.)
 
 This plugin should (in theory) work in MuseScore versions 3.5 and up.
+
+### MuseScore 4
+
+As of writing, the MuseScore 4 (MS4) plugin environment is still a work in progress. Nevertheless, a version for MS4 is available, with the following limitations:
+
+* Dialog. Docked plugins are currently unavailable, forcing the plugin to be a dialog.
+* Fixed dimensions. On some resolutions, the dialog box may be too small or big. I've added an option to the dimensions in the settings.
+* Jank text input UI in settings. QML `TextField` doesn't work for now, so please bear with it.
+
+Also, FYI note that the `ElementType` codes have changed between MS4 and MS3. See the table in [Settings](#settings).
 
 ### Development
 Pull requests, translations, and bug reports are welcome.
